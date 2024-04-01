@@ -104,7 +104,7 @@ export default function SignIn() {
           </div>
           {errorMessage && (
             <Alert className="mt-5" color="failure">
-              {errorMessage}
+              {errorMessage.error}
             </Alert>
           )}
         </div>
