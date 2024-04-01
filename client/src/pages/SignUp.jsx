@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Label, TextInput, Button, Alert, Spinner } from "flowbite-react";
 
 import logo from "../images/logo.png";
+import OAuth from "../components/OAuth";
 
 const Logo = () => (
   <img src={logo} alt="Tony's Blog Logo" className="h-8 sm:h-10 self-center" />
@@ -99,6 +100,7 @@ export default function SignUp() {
                 "Sign Up"
               )}
             </Button>
+            <OAuth />
           </form>
           <div className="flex gap-2 text-sm mt-5">
             <span>Have an account?</span>

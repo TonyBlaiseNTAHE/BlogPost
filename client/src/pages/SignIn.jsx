@@ -10,6 +10,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 
 import logo from "../images/logo.png";
+import OAuth from "../components/OAuth";
 
 const Logo = () => (
   <img src={logo} alt="Tony's Blog Logo" className="h-8 sm:h-10 self-center" />
@@ -95,11 +96,12 @@ export default function SignIn() {
                 "Sign In"
               )}
             </Button>
+            <OAuth />
           </form>
           <div className="flex gap-2 text-sm mt-5">
             <span>Do not Have an account?</span>
-            <Link to="/sign-in" className="text-cyan-500" disabled={loading}>
-              Sign In
+            <Link to="/sign-up" className="text-cyan-500" disabled={loading}>
+              Sign Up
             </Link>
           </div>
           {errorMessage && (
