@@ -39,9 +39,6 @@ export default function Header() {
         <Link to="/about" className=" hover:text-cyan-700">
           About
         </Link>
-        <Link to="/projects" className="hover:text-cyan-700">
-          Projects
-        </Link>
       </div>
       <div className="flex gap-2 md:order-2">
         <Button
