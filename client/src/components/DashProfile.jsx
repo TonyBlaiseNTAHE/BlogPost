@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { TextInput, Button, Alert } from "flowbite-react";
+import { Link } from "react-router-dom";
 import {
   getDownloadURL,
   getStorage,
@@ -159,6 +160,13 @@ export default function DashProfile() {
         <Button type="submit" gradientMonochrome="cyan" outline>
           Update
         </Button>
+        {currentUser.isAdmin && (
+          <Link to={"/create-post"}>
+            <Button type="button" gradientMonochrome="cyan" className="w-full">
+              Create a post
+            </Button>
+          </Link>
+        )}
         <div className="text-red-500 flex justify-between mt-5">
           <span className="cursor-pointer">Delete Account</span>
           <span className="cursor-pointer">Sign Out</span>
