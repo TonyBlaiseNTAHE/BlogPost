@@ -17,7 +17,7 @@ export default function Header() {
   const { theme } = useSelector((state) => state.theme);
 
   return (
-    <Navbar className="border-b-2">
+    <Navbar className="border-b-2 ">
       <Link to="/" className="flex items-center">
         <Logo />
         <span className="ml-2 whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white hover:text-blue-700">
