@@ -6,11 +6,10 @@ import {
   signInSuccess,
   signInFailure,
 } from "../redux/user/userSlice";
-
 import { useDispatch, useSelector } from "react-redux";
 
 import logo from "../images/logo.png";
-import OAuth from "../components/OAuth";
+//import OAuth from "../components/OAuth";
 
 const Logo = () => (
   <img src={logo} alt="Tony's Blog Logo" className="h-8 sm:h-10 self-center" />
@@ -48,7 +47,7 @@ export default function SignIn() {
       dispatch(signInFailure(error.message));
     }
   };
-  console.log(formData);
+  //console.log(formData);
   return (
     <div className="min-h-screen mt-20">
       <div className="flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items gap-5">
@@ -61,14 +60,14 @@ export default function SignIn() {
             </span>
           </Link>
           <p className="tex-sm mt-5">
-            Welcome to my Blog Post website. You can sign up with your email and
+            Welcome to my Blog Post website. You can sign in with your email and
             password or with Google.
           </p>
         </div>
         {/* right side */}
         <div className="flex-1">
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-            <div className="">
+            <div>
               <Label value="Your email" />
               <TextInput
                 type="text"
@@ -81,7 +80,7 @@ export default function SignIn() {
               <Label value="Your Password" />
               <TextInput
                 type="password"
-                placeholder="*******"
+                placeholder="***********"
                 id="password"
                 onChange={handleChange}
               />
@@ -96,17 +95,19 @@ export default function SignIn() {
                 "Sign In"
               )}
             </Button>
-            <OAuth />
           </form>
           <div className="flex gap-2 text-sm mt-5">
-            <span>Do not Have an account?</span>
+            <span>Do not have an account?</span>
             <Link to="/sign-up" className="text-cyan-500" disabled={loading}>
               Sign Up
             </Link>
           </div>
           {errorMessage && (
             <Alert className="mt-5" color="failure">
-              {errorMessage.error}
+              <div>
+                <p>Error Message: {errorMessage.message}</p>
+                {/* Add more fields as needed */}
+              </div>
             </Alert>
           )}
         </div>
