@@ -35,11 +35,11 @@ To use the project:
 
 - User Authentication: Users can create accounts, log in, and log out securely.
 <p align="center">
-  <img src="./special/client/src/images/signin.png" alt="Size Limit CLI" width="738">
+  <img src="./client/src/images/signin.png" alt="Size Limit CLI" width="738">
 </p>
 - Article Viewing: Users can read articles posted on the platform.
 <p align="center">
-  <img src="./special/client/src/images/homepage.png" alt="Size Limit CLI" width="738">
+  <img src="./client/src/images/homepage.png" alt="Size Limit CLI" width="738">
 </p>
 
 ## Contributing
