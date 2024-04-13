@@ -61,7 +61,7 @@ export default function SignIn() {
           </Link>
           <p className="tex-sm mt-5">
             Welcome to my Blog Post website. You can sign in with your email and
-            password or with Google.
+            password.
           </p>
         </div>
         {/* right side */}
